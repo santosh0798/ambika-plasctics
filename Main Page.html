@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Welcome TO Ambika Plastic Industry</title>
+<style type="text/css">
+.menu1 td
+{
+	width:100px;
+	text- align:center;
+	border-radius:7px;
+	border:gray 1px solid;
+}
+.menu1 a
+{
+	text-decoration:none;
+}
+.menu1 td:hover
+{
+	background:-webkit-linear-gradient(top,#CF0,#C36);
+	box-shadow:inset white 0px 0px 10px;
+	border-radius:7px
+}
+.menu1 td:hover a
+{
+	color:white;
+	text-decoration:underline;
+}
+.menu1
+{
+	padding-top:10px;
+	height:30px;
+	border-bottom:2px red solid;
+	background:-webkit-linear-gradient(top,#FFF,#0FF);
+	border-radius:10px;
+	text-align:center;
+}
+.menu1 table
+{
+	margin:auto;
+}
+</style>
+<style type="text/css">
+#imageslider{
+	margin:auto;
+	border:0px black solid;
+	border-radius:10px;
+	width:1000px;
+	height:400px;
+	}
+	
+	#imageslider img
+	{
+	border-radius:15px;
+	}
+	body
+	{
+	text-align:center;
+	}
+	</style>
+	<script type="text/javascript">
+	var imgList;
+	var imgTitle;
+	var currentImg;
+	var totalImages;
+	
+	function PageLoad()
+		{
+					//class
+		imgList=new Array("image/Structural-Foam-Molding.jpg","image/j110ad_face-sans-capots.jpg","image/tw-banner.png","image/IMG20180909144430.jpg");
+		imgTitle=new Array
+		currentImg=0;
+		totalImages=imgList.length;	
+		document.getElementById("imgView").src=imgList[currentImg];
+		setTimeout('viewImageSlider()',2000);
+		}
+	
+	function viewImageSlider()
+			{
+			currentImg++;
+			if(currentImg==totalImages)	
+				{
+				currentImg=0;
+				}
+			document.getElementById("imgView").src=imgList[currentImg];	
+			setTimeout('viewImageSlider()',3000);			
+			
+			}
+	function Today()
+		{
+		
+		var dtObj=new Date();//class
+		var dayList=new Array("Sun","Mon","Tue","Wed","Thu","Fri","Sat");
+		var monthList=new Array("Jan","Feb","March","April","May","June","July","Aug","Sep","Oct","Nov","Dec");
+		
+		var dow=dtObj.getDay();//0-6
+		var dd=dtObj.getDate();
+		var mm=dtObj.getMonth();//0-11
+		var yy=dtObj.getFullYear();// 2013
+		
+		var hh=dtObj.getHours();//24 Clock
+		var mi=dtObj.getMinutes();
+		var ss=dtObj.getSeconds();
+		
+		var pdate=dayList[dow] + ", " + dd + "-" + monthList[mm] + "-" + yy;
+		var ptime=hh + " : " + mi + " : " + ss;
+		document.getElementById("cdt").innerHTML="Today : " + pdate + " " + ptime;
+		setTimeout('Today()',1000);
+		}
+		</script>
+
+</head>
+<body background="image/3843.jpg" onload="PageLoad();">
+<table width="100%">
+<tr>
+  <td align="center" colspan="2" valign="middle"><h1>AMBIKA PLASTIC INDUSTRY</h1></td>
+  <td align="left" colspan="2" ><img src="image/progra.png" height="100px"/></td>
+ </tr>
+</table>
+<nav class="menu1">
+<table>
+<tr>
+<td><a href="Main Page.html">Home</a></td>
+<td><a href="About.html">About</a></td>
+<td><a href="contact.html">Contact</a></td>
+<td><a href="Product.html">Products</a></td>
+<td><a href="Service.html">Service</a></td>
+<td><a href="Product gallery.html">Gallery</a></td>
+<td><a href="About Machines.html">Machines</a></td>
+</tr>
+</table>
+</nav>
+<marquee direction="left" scrollamount="4">
+<p><h1>WELCOME TO AMBIKA PLASTIC INDUSTRY</h1></p>
+</marquee>
+<label id=cdt>
+</label>
+<div id=imageslider>
+<img id=imgView src=# height=400px width=1000px />
+<label id=ititle></label>
+</div>
+<table width="100%">
+<tr>
+<td align="center" colspan="2"><img src="image/download (1).jpg" /></td>
+<td align="center" colspan="2" valign="middle"><p>AmbiKa Plastic Has Been Pioneer Manufacturing High Quality Plastics Products Of Daily Use Since 1995.
+At  Every Stage Of Product Development Is Evaluated In Terms Of Changing Technologies , Innovative Design And Attractive Colors.
+ 
+AmbiKa Is Well – Known Company In Products For Kids And School Going Children.
+These Products Can Be Used Daily By School Going Children To Carry Food , Snack And Liquid. Each Of These Products Is Microwave And Dishwasher Safe.
+</p></td>
+</tr>
+</table>
+</body>
+</html>

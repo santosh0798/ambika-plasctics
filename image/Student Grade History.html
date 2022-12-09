@@ -1,0 +1,2087 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0044)https://www.students.gtu.ac.in/StudHist.aspx -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>
+	Student Grade History
+</title><link href="./Student Grade History_files/Site.css" rel="stylesheet" type="text/css">
+    <script src="./Student Grade History_files/jquery-1.4.1.js.download" type="text/javascript"></script>
+    <script src="./Student Grade History_files/jquery-1.4.1.min.js.download" type="text/javascript"></script>
+    <script src="./Student Grade History_files/jquery-1.4.1-vsdoc.js.download" type="text/javascript"></script>
+    <style>
+        .right
+        {
+            float: right;
+        }
+    </style>
+    
+    <style type="text/css" media="print">
+        .Page
+        {
+            display: none;
+        }
+        
+        .verticalLine
+        {
+            border-left: thick solid #ff0000;
+        }
+        
+        .imgmargin
+        {
+            margin-right: 20px;
+        }
+        
+        .imgcaptch > img
+        {
+            border: 1px solid grey !important;
+            width: 130px;
+            height: 40px;
+        }
+        
+        .button
+        {
+        }
+    </style>
+    <script type="text/javascript">
+        function RefreshCaptcha() {
+            var img = document.getElementById("imgCaptcha");
+            img.src = "../Handler.ashx?query=" + Math.random();
+        }
+    </script>
+</head>
+<body>
+    <form method="post" action="https://www.students.gtu.ac.in/StudHist.aspx" onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;MainContent_btnSubmit&#39;)" id="ctl01">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['ctl01'];
+if (!theForm) {
+    theForm = document.ctl01;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./Student Grade History_files/WebResource.axd" type="text/javascript"></script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="A71F3F29">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAWeAug9QYpOvqx06pt2lqfg9ikmBulvsHq2oMzs5zzDkhAXVl8hcxSZjzmSlShdiQxOPDgdEaRkFR5jjtY+1v2l+CHI2KGhrgOke/DbhB4LDZHFIbZnsgKDeC0Vl0DVeXQVEN3Ok11LPFZbx1bquv8f">
+</div>
+    <div class="page">
+        <div class="header">
+            <div>
+                <span id="Label2" style="color:#0AA8BD;">Counter : </span>
+                <span id="lblCounter" style="color:#0AA8BD;">103000</span>
+                <span id="Label1" style="color:#0AA8BD;">(started : 16-07-15)</span>
+            </div>
+            <div class="title">
+                <img src="./Student Grade History_files/logo.png" style="margin-left: -880px; width: 50px; margin-top: 5px;
+                    margin-bottom: -35px;">
+                <center>
+                    <h1>
+                        Gujarat Technological University</h1>
+                </center>
+                <h2 id="PGTitle">
+                    Student Grade History
+                </h2>
+            </div>
+            <div class="clear hideSkiplink">
+            </div>
+        </div>
+        <div class="main">
+            
+    <table class="Page">
+        <tbody><tr>
+            <td>
+                <table>
+                    <tbody><tr>
+                        <td height="15px">
+                            Enrollment No :
+                        </td>
+                        <td>
+                            <input name="ctl00$MainContent$txtEnrollNo" type="text" value="126590307001" maxlength="12" id="MainContent_txtEnrollNo" tabindex="1" oninvalid="setCustomValidity(&#39;Invalid Enroll No.&#39;)" onchange="try{setCustomValidity(&#39;&#39;)}catch(e){}" pattern="\d*" style="font-size:Large;height:35px;">
+                            
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+            <td>
+                <table class="imgmargin">
+                    <tbody><tr>
+                        <td>
+                            
+                            <input type="image" name="ctl00$MainContent$imgref" id="MainContent_imgref" class="imgmargin" src="./Student Grade History_files/refresh_24.png" alt="Refresh" onclick="javascript:RefreshCaptcha();">
+                        </td>
+                        <td dir="ltr">
+                            <img src="./Student Grade History_files/Handler.ashx" id="imgCaptcha">
+                            
+                        </td>
+                        <td>
+                            Captcha Validation :
+                        </td>
+                        <td>
+                            <input name="ctl00$MainContent$CodeNumberTextBox" type="text" maxlength="9" id="MainContent_CodeNumberTextBox" tabindex="2" class="csstext" style="color:#CC0000;font-size:Large;height:35px;width: 80px; height: 20px; padding-top: 2px; margin-top: 5px;">
+                        </td>
+                        <td>
+                            <input type="submit" name="ctl00$MainContent$btnSubmit" value="Search" id="MainContent_btnSubmit" tabindex="3" class="button" style="background-color:#999999;border-style:Solid;font-size:Medium;font-weight:normal;height:40px;width:150px;">
+                            
+                        </td>
+                    </tr>
+                </tbody></table>
+            </td>
+        </tr>
+    </tbody></table>
+    <table>
+        <tbody><tr>
+            <td>
+                <span id="MainContent_lblMSG" style="color:Red;font-weight:bold;"></span>
+            </td>
+        </tr>
+    </tbody></table>
+    <table id="MainContent_TblStdInfo" class="Mytable" style="color: Black;">
+	<tbody><tr>
+		<td>
+                Name :
+            </td>
+		<td>
+                <span id="MainContent_lblName">ANURADHA KUMARI JHA</span>
+            </td>
+	</tr>
+	<tr>
+		<td>
+                Enrollment No :
+            </td>
+		<td>
+                <span id="MainContent_lblMapNumber">126590307001</span>
+            </td>
+	</tr>
+	<tr>
+		<td>
+                Institute :
+            </td>
+		<td>
+                <span id="MainContent_lblInstName">659--DR. B. B. A. GOVERNMENT POLYTECHNIC, KARAD</span>
+            </td>
+	</tr>
+	<tr>
+		<td>
+                Branch :
+            </td>
+		<td>
+                <span id="MainContent_lblBranch">DI-07-COMPUTER ENGINEERING</span>
+            </td>
+	</tr>
+	<tr>
+		<td>
+                
+            </td>
+	</tr>
+</tbody></table>
+
+    <div id="MainContent_div2">
+        <div>
+	<table class="Mytable textcenter" cellspacing="0" cellpadding="2" rules="all" id="MainContent_grdv2" style="color:Black;background-color:LightGoldenrodYellow;border-color:Tan;border-width:1px;border-style:solid;border-collapse:collapse;">
+		<tbody><tr style="background-color:Tan;font-weight:bold;">
+			<th scope="col">Enrollment No.</th><th scope="col">CPI</th><th scope="col">CGPA</th><th scope="col">TOT BACKL</th><th scope="col">BCK1</th><th scope="col">BCK2</th><th scope="col">BCK3</th><th scope="col">BCK4</th><th scope="col">BCK5</th><th scope="col">BCK6</th>
+		</tr><tr>
+			<td>126590307001</td><td>8.43</td><td>8.48</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+		</tr>
+	</tbody></table>
+</div>
+        <div>
+	<table class="textcenter" cellspacing="0" align="Center" rules="all" border="1" id="MainContent_grdvLastExm" style="background-color:Bisque;width:100%;border-collapse:collapse;">
+		<tbody><tr>
+			<th scope="col">Last Exam</th><th scope="col">Sem</th><th scope="col">Declaration Date</th><th scope="col">Cur Back</th><th scope="col">SPI</th><th scope="col">Convo Year</th><th scope="col">Enroll Cancel</th>
+		</tr><tr>
+			<td>
+                        <span id="MainContent_grdvLastExm_Label1_0" title="828">DIPL SEM 6 - Regular ( MAY 2015 )</span>
+                    </td><td>6</td><td>26-6-2015</td><td>0</td><td>8.65</td><td>2015</td><td>&nbsp;</td>
+		</tr>
+	</tbody></table>
+</div>
+    </div>
+    <div style="text-align: center">
+        <span id="MainContent_dtnmsg" style="color:Maroon;font-size:11pt;"></span>
+    </div>
+    <div style="vertical-align: bottom">
+        
+        <div>
+
+</div>
+    </div>
+    <div id="MainContent_div3">
+        
+                <table class="mrksheet Mytable">
+                    <tbody><tr>
+                        <th>
+                            Sem
+                            <span id="MainContent_rptmarksheetHistoryOuter_Label6_0">1</span>
+                        </th>
+                    </tr>
+                </tbody></table>
+                
+                        <table class="Session">
+                            <tbody><tr>
+                                <td>
+                                    <span id="lblSession" class="Ses">Winter - 2012</span>
+                                    <span id="lblSeatno" class="Ses">(Seat No : D190316)</span>
+                                </td>
+                                <td align="right" style="font-weight: bold;">
+                                    CUR. BACKLOG :
+                                    <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_lblBCK_0">0</span>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <table class="mrksheetdetail Mytable">
+                            
+                            
+                            
+                                    <tbody><tr>
+                                        <th style="width: 70px;">
+                                            sub code
+                                        </th>
+                                        <th style="width: 700px;">
+                                            subject name
+                                        </th>
+                                        <th style="width: 20px;">
+                                            E_AB
+                                        </th>
+                                        <th style="width: 20px;">
+                                            TH ESE
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            TH PA
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            TH TOTAL
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR ESE
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR PA
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR TOTAL
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            Subject Grade
+                                        </th>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_TextBox3_0">3300001</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_TextBox4_0">BASIC MATHEMATICS</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label9_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label2_0">BC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label3_0">CC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label4_0">BC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label5_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label7_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label8_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label1_0">BC</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_TextBox3_1">3300002</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_TextBox4_1">ENGLISH</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label9_1">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label2_1">BC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label3_1">BB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label4_1">BB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label5_1">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label7_1">BB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label8_1">AB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label1_1">BB</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_TextBox3_2">3300003</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_TextBox4_2">ENVIRONMENT CONSERVATION AND HAZARD MANAGEMENT</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label9_2">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label2_2">CC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label3_2">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label4_2">BC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label5_2">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label7_2">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label8_2">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label1_2">BC</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_TextBox3_3">3310701</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_TextBox4_3">COMPUTER PROGRAMMING</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label9_3">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label2_3">BB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label3_3">BB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label4_3">BB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label5_3">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label7_3">AB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label8_3">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label1_3">AB</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_TextBox3_4">3310702</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_TextBox4_4">FUNDAMENTAL OF DIGITAL ELECTRONICS</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label9_4">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label2_4">DD</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label3_4">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label4_4">CC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label5_4">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label7_4">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label8_4">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label1_4">BB</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_TextBox3_5">3310703</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_TextBox4_5">FUNDAMENTAL OF COMPUTER APPLICATION</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label9_5">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label2_5">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label3_5">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label4_5">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label5_5">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label7_5">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label8_5">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_0_rptmarksheetHistoryInnerNew_0_Label1_5">AA</span>
+                                        </td>
+                                    </tr>
+                                
+                        </tbody></table>
+                    
+            
+                <table class="mrksheet Mytable">
+                    <tbody><tr>
+                        <th>
+                            Sem
+                            <span id="MainContent_rptmarksheetHistoryOuter_Label6_1">2</span>
+                        </th>
+                    </tr>
+                </tbody></table>
+                
+                        <table class="Session">
+                            <tbody><tr>
+                                <td>
+                                    <span id="lblSession" class="Ses">Summer - 2013</span>
+                                    <span id="lblSeatno" class="Ses">(Seat No : D175675)</span>
+                                </td>
+                                <td align="right" style="font-weight: bold;">
+                                    CUR. BACKLOG :
+                                    <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_lblBCK_0">1</span>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <table class="mrksheetdetail Mytable">
+                            
+                            
+                            
+                                    <tbody><tr>
+                                        <th style="width: 70px;">
+                                            sub code
+                                        </th>
+                                        <th style="width: 700px;">
+                                            subject name
+                                        </th>
+                                        <th style="width: 20px;">
+                                            E_AB
+                                        </th>
+                                        <th style="width: 20px;">
+                                            TH ESE
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            TH PA
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            TH TOTAL
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR ESE
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR PA
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR TOTAL
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            Subject Grade
+                                        </th>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_TextBox3_0">3300005</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_TextBox4_0">BASIC PHYSICS (GROUP-2)</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label9_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label2_0">BC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label3_0">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label4_0">BB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label5_0">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label7_0">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label8_0">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label1_0">AB</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_TextBox3_1">3320002</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_TextBox4_1">ADVANCED MATHEMATICS (GROUP-1)</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label9_1">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label2_1">FF</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label3_1">BC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label4_1">FF</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label5_1">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label7_1">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label8_1">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label1_1">FF</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_TextBox3_2">3320701</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_TextBox4_2">BASIC ELECTRONICS</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label9_2">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label2_2">DD</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label3_2">AB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label4_2">CC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label5_2">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label7_2">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label8_2">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label1_2">BB</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_TextBox3_3">3320702</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_TextBox4_3">ADVANCED COMPUTER PROGRAMMING</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label9_3">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label2_3">AB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label3_3">AB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label4_3">AB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label5_3">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label7_3">AB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label8_3">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label1_3">AB</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_TextBox3_4">3320703</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_TextBox4_4">STATIC WEB PAGE DESIGNING</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label9_4">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label2_4">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label3_4">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label4_4">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label5_4">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label7_4">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label8_4">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label1_4">AA</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_TextBox3_5">3990001</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_TextBox4_5">CONTRIBUTOR  PERSONALITY DEVELOPMENT</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label9_5">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label2_5">AB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label3_5">BC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label4_5">AB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label5_5">AB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label7_5">BB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label8_5">BB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_0_Label1_5">AB</span>
+                                        </td>
+                                    </tr>
+                                
+                        </tbody></table>
+                    
+                        <table class="Session">
+                            <tbody><tr>
+                                <td>
+                                    <span id="lblSession" class="Ses">Winter - 2013</span>
+                                    <span id="lblSeatno" class="Ses">(Seat No : D193099)</span>
+                                </td>
+                                <td align="right" style="font-weight: bold;">
+                                    CUR. BACKLOG :
+                                    <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_lblBCK_1">1</span>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <table class="mrksheetdetail Mytable">
+                            
+                            
+                            
+                                    <tbody><tr>
+                                        <th style="width: 70px;">
+                                            sub code
+                                        </th>
+                                        <th style="width: 700px;">
+                                            subject name
+                                        </th>
+                                        <th style="width: 20px;">
+                                            E_AB
+                                        </th>
+                                        <th style="width: 20px;">
+                                            TH ESE
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            TH PA
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            TH TOTAL
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR ESE
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR PA
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR TOTAL
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            Subject Grade
+                                        </th>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_1_TextBox3_0">3320002</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_1_TextBox4_0">ADVANCED MATHEMATICS (GROUP-1)</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_1_Label9_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_1_Label2_0">FF</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_1_Label3_0">BC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_1_Label4_0">FF</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_1_Label5_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_1_Label7_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_1_Label8_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_1_Label1_0">FF</span>
+                                        </td>
+                                    </tr>
+                                
+                        </tbody></table>
+                    
+                        <table class="Session">
+                            <tbody><tr>
+                                <td>
+                                    <span id="lblSession" class="Ses">Summer - 2014</span>
+                                    <span id="lblSeatno" class="Ses">(Seat No : D176390)</span>
+                                </td>
+                                <td align="right" style="font-weight: bold;">
+                                    CUR. BACKLOG :
+                                    <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_lblBCK_2">1</span>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <table class="mrksheetdetail Mytable">
+                            
+                            
+                            
+                                    <tbody><tr>
+                                        <th style="width: 70px;">
+                                            sub code
+                                        </th>
+                                        <th style="width: 700px;">
+                                            subject name
+                                        </th>
+                                        <th style="width: 20px;">
+                                            E_AB
+                                        </th>
+                                        <th style="width: 20px;">
+                                            TH ESE
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            TH PA
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            TH TOTAL
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR ESE
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR PA
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR TOTAL
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            Subject Grade
+                                        </th>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_2_TextBox3_0">3320002</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_2_TextBox4_0">ADVANCED MATHEMATICS (GROUP-1)</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_2_Label9_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_2_Label2_0">FF</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_2_Label3_0">BC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_2_Label4_0">FF</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_2_Label5_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_2_Label7_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_2_Label8_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_2_Label1_0">FF</span>
+                                        </td>
+                                    </tr>
+                                
+                        </tbody></table>
+                    
+                        <table class="Session">
+                            <tbody><tr>
+                                <td>
+                                    <span id="lblSession" class="Ses">Winter - 2014</span>
+                                    <span id="lblSeatno" class="Ses">(Seat No : D185022)</span>
+                                </td>
+                                <td align="right" style="font-weight: bold;">
+                                    CUR. BACKLOG :
+                                    <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_lblBCK_3">0</span>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <table class="mrksheetdetail Mytable">
+                            
+                            
+                            
+                                    <tbody><tr>
+                                        <th style="width: 70px;">
+                                            sub code
+                                        </th>
+                                        <th style="width: 700px;">
+                                            subject name
+                                        </th>
+                                        <th style="width: 20px;">
+                                            E_AB
+                                        </th>
+                                        <th style="width: 20px;">
+                                            TH ESE
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            TH PA
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            TH TOTAL
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR ESE
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR PA
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR TOTAL
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            Subject Grade
+                                        </th>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_3_TextBox3_0">3320002</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_3_TextBox4_0">ADVANCED MATHEMATICS (GROUP-1)</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_3_Label9_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_3_Label2_0">DD</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_3_Label3_0">BC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_3_Label4_0">CD</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_3_Label5_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_3_Label7_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_3_Label8_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_1_rptmarksheetHistoryInnerNew_3_Label1_0">CD</span>
+                                        </td>
+                                    </tr>
+                                
+                        </tbody></table>
+                    
+            
+                <table class="mrksheet Mytable">
+                    <tbody><tr>
+                        <th>
+                            Sem
+                            <span id="MainContent_rptmarksheetHistoryOuter_Label6_2">3</span>
+                        </th>
+                    </tr>
+                </tbody></table>
+                
+                        <table class="Session">
+                            <tbody><tr>
+                                <td>
+                                    <span id="lblSession" class="Ses">Winter - 2013</span>
+                                    <span id="lblSeatno" class="Ses">(Seat No : D351822)</span>
+                                </td>
+                                <td align="right" style="font-weight: bold;">
+                                    CUR. BACKLOG :
+                                    <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_lblBCK_0">2</span>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <table class="mrksheetdetail Mytable">
+                            
+                            
+                            
+                                    <tbody><tr>
+                                        <th style="width: 70px;">
+                                            sub code
+                                        </th>
+                                        <th style="width: 700px;">
+                                            subject name
+                                        </th>
+                                        <th style="width: 20px;">
+                                            E_AB
+                                        </th>
+                                        <th style="width: 20px;">
+                                            TH ESE
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            TH PA
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            TH TOTAL
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR ESE
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR PA
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR TOTAL
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            Subject Grade
+                                        </th>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_TextBox3_0">3330701</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_TextBox4_0">OPERATING SYSTEM</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label9_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label2_0">CD</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label3_0">BB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label4_0">CC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label5_0">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label7_0">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label8_0">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label1_0">BB</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_TextBox3_1">3330702</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_TextBox4_1">PROGRAMMING IN C++</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label9_1">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label2_1">DD</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label3_1">BC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label4_1">CC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label5_1">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label7_1">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label8_1">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label1_1">BC</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_TextBox3_2">3330703</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_TextBox4_2">DATABASE MANAGEMENT SYSTEM</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label9_2">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label2_2">CC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label3_2">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label4_2">BC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label5_2">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label7_2">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label8_2">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label1_2">BB</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_TextBox3_3">3330704</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_TextBox4_3">DATA STRUCTURE</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label9_3">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label2_3">FF</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label3_3">AB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label4_3">FF</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label5_3">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label7_3">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label8_3">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label1_3">FF</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_TextBox3_4">3330705</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_TextBox4_4">MICROPROCESSOR &amp; ASSEMBLY LANGUAGE PROGRAMMING</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label9_4">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label2_4">FF</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label3_4">CD</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label4_4">FF</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label5_4">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label7_4">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label8_4">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_0_Label1_4">FF</span>
+                                        </td>
+                                    </tr>
+                                
+                        </tbody></table>
+                    
+                        <table class="Session">
+                            <tbody><tr>
+                                <td>
+                                    <span id="lblSession" class="Ses">Summer - 2014</span>
+                                    <span id="lblSeatno" class="Ses">(Seat No : D333981)</span>
+                                </td>
+                                <td align="right" style="font-weight: bold;">
+                                    CUR. BACKLOG :
+                                    <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_lblBCK_1">0</span>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <table class="mrksheetdetail Mytable">
+                            
+                            
+                            
+                                    <tbody><tr>
+                                        <th style="width: 70px;">
+                                            sub code
+                                        </th>
+                                        <th style="width: 700px;">
+                                            subject name
+                                        </th>
+                                        <th style="width: 20px;">
+                                            E_AB
+                                        </th>
+                                        <th style="width: 20px;">
+                                            TH ESE
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            TH PA
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            TH TOTAL
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR ESE
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR PA
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR TOTAL
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            Subject Grade
+                                        </th>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_1_TextBox3_0">3330704</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_1_TextBox4_0">DATA STRUCTURE</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_1_Label9_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_1_Label2_0">DD</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_1_Label3_0">AB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_1_Label4_0">CC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_1_Label5_0">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_1_Label7_0">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_1_Label8_0">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_1_Label1_0">BC</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_1_TextBox3_1">3330705</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_1_TextBox4_1">MICROPROCESSOR &amp; ASSEMBLY LANGUAGE PROGRAMMING</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_1_Label9_1">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_1_Label2_1">DD</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_1_Label3_1">CD</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_1_Label4_1">DD</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_1_Label5_1">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_1_Label7_1">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_1_Label8_1">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_2_rptmarksheetHistoryInnerNew_1_Label1_1">BC</span>
+                                        </td>
+                                    </tr>
+                                
+                        </tbody></table>
+                    
+            
+                <table class="mrksheet Mytable">
+                    <tbody><tr>
+                        <th>
+                            Sem
+                            <span id="MainContent_rptmarksheetHistoryOuter_Label6_3">4</span>
+                        </th>
+                    </tr>
+                </tbody></table>
+                
+                        <table class="Session">
+                            <tbody><tr>
+                                <td>
+                                    <span id="lblSession" class="Ses">Summer - 2014</span>
+                                    <span id="lblSeatno" class="Ses">(Seat No : D439980)</span>
+                                </td>
+                                <td align="right" style="font-weight: bold;">
+                                    CUR. BACKLOG :
+                                    <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_lblBCK_0">0</span>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <table class="mrksheetdetail Mytable">
+                            
+                            
+                            
+                                    <tbody><tr>
+                                        <th style="width: 70px;">
+                                            sub code
+                                        </th>
+                                        <th style="width: 700px;">
+                                            subject name
+                                        </th>
+                                        <th style="width: 20px;">
+                                            E_AB
+                                        </th>
+                                        <th style="width: 20px;">
+                                            TH ESE
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            TH PA
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            TH TOTAL
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR ESE
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR PA
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR TOTAL
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            Subject Grade
+                                        </th>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_TextBox3_0">3340701</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_TextBox4_0">ADVANCED DATABASE MANAGEMENT SYSTEM</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label9_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label2_0">BB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label3_0">AB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label4_0">BB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label5_0">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label7_0">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label8_0">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label1_0">AB</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_TextBox3_1">3340702</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_TextBox4_1">COMPUTER NETWORKS</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label9_1">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label2_1">BB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label3_1">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label4_1">AB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label5_1">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label7_1">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label8_1">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label1_1">AB</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_TextBox3_2">3340704</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_TextBox4_2">.NET PROGRAMMING</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label9_2">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label2_2">BC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label3_2">BB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label4_2">BB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label5_2">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label7_2">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label8_2">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label1_2">AB</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_TextBox3_3">3340705</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_TextBox4_3">COMPUTER ORGANIZATION AND ARCHITECTURE</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label9_3">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label2_3">BC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label3_3">CD</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label4_3">BC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label5_3">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label7_3">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label8_3">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label1_3">BC</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_TextBox3_4">3340706</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_TextBox4_4">WEB DEVELOPMENT TOOLS</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label9_4">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label2_4">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label3_4">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label4_4">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label5_4">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label7_4">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label8_4">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label1_4">AA</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_TextBox3_5">3341603</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_TextBox4_5">FUNDAMENTALS OF SOFTWARE DEVELOPMENT</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label9_5">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label2_5">CD</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label3_5">AB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label4_5">CC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label5_5">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label7_5">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label8_5">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_3_rptmarksheetHistoryInnerNew_0_Label1_5">BB</span>
+                                        </td>
+                                    </tr>
+                                
+                        </tbody></table>
+                    
+            
+                <table class="mrksheet Mytable">
+                    <tbody><tr>
+                        <th>
+                            Sem
+                            <span id="MainContent_rptmarksheetHistoryOuter_Label6_4">5</span>
+                        </th>
+                    </tr>
+                </tbody></table>
+                
+                        <table class="Session">
+                            <tbody><tr>
+                                <td>
+                                    <span id="lblSession" class="Ses">Winter - 2014</span>
+                                    <span id="lblSeatno" class="Ses">(Seat No : D532332)</span>
+                                </td>
+                                <td align="right" style="font-weight: bold;">
+                                    CUR. BACKLOG :
+                                    <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_lblBCK_0">0</span>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <table class="mrksheetdetail Mytable">
+                            
+                            
+                            
+                                    <tbody><tr>
+                                        <th style="width: 70px;">
+                                            sub code
+                                        </th>
+                                        <th style="width: 700px;">
+                                            subject name
+                                        </th>
+                                        <th style="width: 20px;">
+                                            E_AB
+                                        </th>
+                                        <th style="width: 20px;">
+                                            TH ESE
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            TH PA
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            TH TOTAL
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR ESE
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR PA
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR TOTAL
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            Subject Grade
+                                        </th>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_TextBox3_0">3350701</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_TextBox4_0">COMPUTER MAINTENACE AND TROUBLE SHOOTING</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label9_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label2_0">BC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label3_0">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label4_0">BB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label5_0">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label7_0">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label8_0">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label1_0">AB</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_TextBox3_1">3350702</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_TextBox4_1">DYNAMIC WEB PAGE DEVELOPMENT</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label9_1">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label2_1">CD</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label3_1">AB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label4_1">CC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label5_1">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label7_1">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label8_1">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label1_1">AB</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_TextBox3_2">3350703</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_TextBox4_2">JAVA PROGRAMMING</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label9_2">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label2_2">DD</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label3_2">AB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label4_2">CC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label5_2">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label7_2">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label8_2">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label1_2">BB</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_TextBox3_3">3350704</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_TextBox4_3">COMPUTER AND NETWORK SECURITY</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label9_3">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label2_3">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label3_3">AB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label4_3">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label5_3">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label7_3">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label8_3">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label1_3">AA</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_TextBox3_4">3350706</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_TextBox4_4">PROJECT-I</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label9_4">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label2_4">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label3_4">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label4_4">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label5_4">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label7_4">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label8_4">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_4_rptmarksheetHistoryInnerNew_0_Label1_4">AA</span>
+                                        </td>
+                                    </tr>
+                                
+                        </tbody></table>
+                    
+            
+                <table class="mrksheet Mytable">
+                    <tbody><tr>
+                        <th>
+                            Sem
+                            <span id="MainContent_rptmarksheetHistoryOuter_Label6_5">6</span>
+                        </th>
+                    </tr>
+                </tbody></table>
+                
+                        <table class="Session">
+                            <tbody><tr>
+                                <td>
+                                    <span id="lblSession" class="Ses">Summer - 2015</span>
+                                    <span id="lblSeatno" class="Ses">(Seat No : D627587)</span>
+                                </td>
+                                <td align="right" style="font-weight: bold;">
+                                    CUR. BACKLOG :
+                                    <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_lblBCK_0">0</span>
+                                </td>
+                            </tr>
+                        </tbody></table>
+                        <table class="mrksheetdetail Mytable">
+                            
+                            
+                            
+                                    <tbody><tr>
+                                        <th style="width: 70px;">
+                                            sub code
+                                        </th>
+                                        <th style="width: 700px;">
+                                            subject name
+                                        </th>
+                                        <th style="width: 20px;">
+                                            E_AB
+                                        </th>
+                                        <th style="width: 20px;">
+                                            TH ESE
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            TH PA
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            TH TOTAL
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR ESE
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR PA
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            PR TOTAL
+                                        </th>
+                                        <th th="" style="width: 20px;">
+                                            Subject Grade
+                                        </th>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_TextBox3_0">3360701</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_TextBox4_0">ADVANCE JAVA PROGRAMMING</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label9_0">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label2_0">DD</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label3_0">BC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label4_0">CD</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label5_0">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label7_0">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label8_0">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label1_0">BB</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_TextBox3_1">3360702</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_TextBox4_1">PROFESSIONAL PRACTICES USING DATABASE</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label9_1">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label2_1">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label3_1">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label4_1">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label5_1">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label7_1">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label8_1">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label1_1">AA</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_TextBox3_2">3360703</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_TextBox4_2">NETWORKING MANAGEMENT &amp; ADMINISTRATION</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label9_2">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label2_2">CC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label3_2">BB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label4_2">CC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label5_2">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label7_2">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label8_2">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label1_2">BB</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_TextBox3_3">3360704</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_TextBox4_3">MOBILE COMPUTING AND APPLICATION DEVELOPMENT</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label9_3">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label2_3">CD</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label3_3">AB</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label4_3">CC</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label5_3">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label7_3">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label8_3">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label1_3">BB</span>
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <td align="center">
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_TextBox3_4">3360707</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_TextBox4_4">PROJECT-II</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label9_4">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label2_4">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label3_4">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label4_4">-</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label5_4">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label7_4">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label8_4">AA</span>
+                                        </td>
+                                        <td>
+                                            <span id="MainContent_rptmarksheetHistoryOuter_rptmarksheetHistoryOuterInner_5_rptmarksheetHistoryInnerNew_0_Label1_4">AA</span>
+                                        </td>
+                                    </tr>
+                                
+                        </tbody></table>
+                    
+            
+        <div>
+            <span id="MainContent_printDateTime" style="color:Black;font-weight:bold;">Print/View Date-Time :01 September, 2018 - 9:39:04</span>
+        </div>
+    </div>
+
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    </form>
+
+
+<div id="dz-frame" style="display:none">  <div class="indshp-products_list-main" style="right:-280px;">
+    <div id="indshp-cl-button">
+      <img class="hcl-b-front" src="https://www.students.gtu.ac.in/StudHist.aspx">
+    </div>
+    <div class="ind-sidebar">
+     <!-- <div class="ind-sidebar-wrap">
+        <a href="#" class="hc-close">x</a>-->
+        <div id="hc-header">
+          
+			
+				<!--<img src="http://www.indiashopps.com/kiran/indiashopps_logo-final.png" width="180px">-->
+			
+            <div class="ind-toggler" id="side-toggle"><img id="sideimg" src="chrome-extension://imedekbkldfofmicojdclhjchkmmnklg/sidebar-exclusive.png" width="27px"></div>
+                
+        </div>
+        <div class="hc-sb-content">		
+          <div id="dz-products" class="hc-sb-c-wrapp">
+			          
+          </div>		  
+        </div>     
+     <!-- </div>-->
+    </div>
+  </div>
+</div></body></html>

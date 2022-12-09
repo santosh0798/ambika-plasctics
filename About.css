@@ -1,0 +1,42 @@
+<head>
+<body>
+.menu1 td 
+{
+	width:100px;
+	text-align:center;
+	border-radius:7px;
+	border:gray #000 solid;
+}
+.menu1 a
+{
+	text-decoration:none;
+}
+.menu1 td: hover
+{
+	background:- webkit-linear-gradient(bottom #003399, #F30);
+	box-shadow:inset white 0px 0px 10px;
+	border-radius:7px;
+}
+.menu1 td: hover a
+{
+	color:#FFF;
+	text-decoration:underline;
+}
+.menu1
+{
+	padding-top:10px;
+	height:30px;
+	border-bottom:2px red solide;
+	background: webkit-linear-gradient(top, #F33,orange);
+	border-radius:10px;
+	text-align:center;
+}
+.menu1 table
+{
+	margin:auto;
+}
+  <nav class=menu1>
+</body>
+</head>
+
+
